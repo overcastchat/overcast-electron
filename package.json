@@ -1,65 +1,25 @@
 {
   "name": "overcast",
-  "productName": "overcast",
+  "productName": "Overcast",
   "version": "0.0.1",
-  "description": "My Electron application description",
+  "description": "Chat for free securely with WebRTC (hey that sorta rhymes)",
   "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "eslint src --color"
-  },
-  "keywords": [],
-  "author": "Kyle",
+    "start": "electron .",
+    "package:mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --out=out",
+    "package:win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --out=out",    "package:win-installer": "node ./scripts/installer.js"  },
+  "keywords": [
+    "chat",
+    "electron"
+  ],
+  "author": "kyleplo",
   "license": "MIT",
-  "config": {
-    "forge": {
-      "make_targets": {
-        "win32": [
-          "squirrel"
-        ],
-        "darwin": [
-          "zip"
-        ],
-        "linux": [
-          "deb",
-          "rpm"
-        ]
-      },
-      "electronPackagerConfig": {
-        "packageManager": "npm"
-      },
-      "electronWinstallerConfig": {
-        "name": "overcast"
-      },
-      "electronInstallerDebian": {},
-      "electronInstallerRedhat": {},
-      "github_repository": {
-        "owner": "",
-        "name": ""
-      },
-      "windowsStoreConfig": {
-        "packageName": "",
-        "name": "overcast"
-      }
-    }
-  },
   "dependencies": {
-    "electron-compile": "^6.4.4",
-    "electron-squirrel-startup": "^1.0.0"
+    "peerjs-server": "^0.2.9"
   },
   "devDependencies": {
-    "babel-plugin-transform-async-to-generator": "^6.24.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "electron-forge": "^5.2.4",
-    "electron-prebuilt-compile": "4.0.0",
-    "eslint": "^3.19.0",
-    "eslint-config-airbnb": "^15.1.0",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.12.4"
+    "electron": "^4.0.6",
+    "electron-packager": "^13.1.0",
+    "electron-winstaller": "^3.0.4"
   }
 }
