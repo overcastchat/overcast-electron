@@ -25,13 +25,26 @@
    <input type="text" id="linkInput" placeholder="Enter a server link" autofocus="">
    <button id="joinServer">Join</button>
   </p>
-  <p>or</p>
-  <p>
-   <button id="custom">Start a Custom Server</button>
-  </p>
+  <div id="customServer">
+   <p>or</p>
+   <p>
+    <button id="custom">Start a Custom Server</button>
+   </p>
+  </div>
  </div>
 </div>
-<p id="bar"><select id="theme-select"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select></p>
+<div class="popup" hidden id="settings-popup">
+ <div class="popup-content">
+  <h3>Server Options</h3>
+  <p>Name: <input type="text" id="server-name"></p>
+  <p>Theme: <select id="server-theme"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select></p>
+  <p><button id="submit-server-settings">OK</button></p>
+ </div>
+</div>
+<p id="bar">
+ <span id="server-name-bar"></span>
+ <select id="theme-select"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select>
+</p>
 <button hidden id="close">&times;</button>
 <p>Your name is <b id="you-id">loading...</b></p>
 <p id="ip" hidden style="-webkit-user-select: text;"></p>
