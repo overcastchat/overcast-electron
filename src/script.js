@@ -146,6 +146,7 @@ function joinServer(id, link){
   chooseTheme(j.theme);
   document.getElementById("theme-select").value = j.theme;
   document.getElementById("server-name-bar").innerText = j.name;
+  document.getElementById("title").innerText = (j.name.length > 0 ? j.name : "Overcast");
  })
  peer.on("close",function (){
   msg("Server", "Oh nose, your connection was closed! Reload to try again.");
@@ -228,6 +229,7 @@ window.addEventListener("load",function (){
   customServer.options.name = document.getElementById("server-name").value;
   customServer.options.theme = document.getElementById("server-theme").value;
   document.getElementById("server-name-bar").innerText = customServer.options.name;
+  document.getElementById("title").innerText = (customServer.options.name > 0 ? customServer.options.name : "Overcast");
   document.getElementById("settings-popup").setAttribute("hidden","hidden");
  });
  document.getElementById("close").addEventListener("click",function (){window.close()})

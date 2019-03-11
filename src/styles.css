@@ -31,7 +31,8 @@ html {
  font-family: Arial;
  background: var(--theme, navy);
  -webkit-user-select: none;
- font-family: var(--font, Arial)
+ font-family: var(--font, Arial);
+ overflow-y: scroll
 }
 .sticky {
  position: sticky;
@@ -63,6 +64,7 @@ body {
  background: var(--theme-light, white);
  color: var(--text, black);
  margin-top: 47px;
+ font-size: 100%;
 }
 
 button#close {
@@ -168,5 +170,14 @@ p.small {
 #server-name-bar {
  color: var(--theme-light, white);
  font-size: 150%;
- padding: 5px;
+ padding: 9px;
+ position: fixed;
+ top: 0;
+ left: 50px;
+}
+
+.logo {
+ position: fixed;
+ top: 0;
+ left: 0;
 }

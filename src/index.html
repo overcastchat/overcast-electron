@@ -12,10 +12,12 @@
 }
 </style>
 <link rel="stylesheet" href="./styles.css">
+<link rel="icon" href="https://overcastchat.github.io/icon.png">
 </head>
 <body>
 <div id="cover">
- <h1>Overcast</h1>
+ <a href="https://overcastchat.github.io/" class="logo"><img src="https://overcastchat.github.io/icon.png" width="100"></a>
+ <h1 id="title">Overcast</h1>
  <p id="enterName" hidden>
   <input type="text" id="nameInput" placeholder="Enter your name and join the chat" autofocus="">
   <button id="join">Join</button>
@@ -25,7 +27,7 @@
    <input type="text" id="linkInput" placeholder="Enter a server link" autofocus="">
    <button id="joinServer">Join</button>
   </p>
-  <div id="customServer">
+  <div id="customServer" hidden>
    <p>or</p>
    <p>
     <button id="custom">Start a Custom Server</button>
@@ -42,6 +44,7 @@
  </div>
 </div>
 <p id="bar">
+ <a href="https://overcastchat.github.io/" class="logo"><img src="https://overcastchat.github.io/icon.png" width="45"></a>
  <span id="server-name-bar"></span>
  <select id="theme-select"><option value="navy">Navy</option><option value="silver">Silver</option><option value="royal">Royal</option><option value="midnight">Midnight</option><option value="sun">Sunny Day</option><option value="hacker">Hacker</option></select>
 </p>
