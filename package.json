@@ -18,7 +18,7 @@
     "peerjs-server": "^0.2.9"
   },
   "devDependencies": {
-    "electron": "^4.0.6",
+    "electron": "^7.2.4",
     "electron-packager": "^13.1.0",
     "electron-winstaller": "^3.0.4"
   }
